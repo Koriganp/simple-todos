@@ -23,7 +23,7 @@ export default class Task extends Component {
 		// so that we can style them nicely in CSS
 
 		return (
-			<li className={taskClassName}>
+			<li>
 
 				<button className="delete" onClick={this.deleteThisTask.bind(this)}>&times;</button>
 
@@ -34,7 +34,7 @@ export default class Task extends Component {
 					onClick={this.toggleChecked.bind(this)}
 				/>
 
-				<span className="text">{this.props.task.text}</span>
+				<span className="text"><strong>{this.props.task.username}</strong>: {this.props.task.text}</span>
 
 			</li>
 		);
